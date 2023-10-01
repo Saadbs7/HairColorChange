@@ -95,6 +95,11 @@ def vis_parsing_maps(im, origin, parsing_anno, stride, save_im=False, save_path=
     SR = int(SR / cnt)
     brigh = brigh / cnt / 3
 
+    if mod=='custom':
+        CR = float(input('Enter Red Value of the Custom RGB Colour: '))
+        CG = float(input('Enter Green Value of the Custom RGB Colour: '))
+        CB = float(input('Enter Blue Value of the Custom RGB Colour: '))
+
     for x in range(0, origin.shape[0]):
         for y in range(0, origin.shape[1]):
             _x = int(x * 512 / origin.shape[0])
@@ -120,9 +125,9 @@ def vis_parsing_maps(im, origin, parsing_anno, stride, save_im=False, save_path=
                     GG = 110
                     GR = 125
                 if mod=='custom':
-                    GR = input('Enter Red Value of the Custom RGB Colour: ')
-                    GG = input('Enter Green Value of the Custom RGB Colour: ')
-                    GB = input('Enter Blue sValue of the Custom RGB Colour: ')
+                    GR = CR
+                    GG = CG
+                    GB = CB
                 
                 if brigh > 120 :
                     param = 20
