@@ -31,9 +31,11 @@
         For example : evaluate(input_path='files/1.JPG', output_path='files/1_black.jpg', mod='gold')
         input_path : input image path
         output_path : output image path
-        mode : color of the hair (There are 3 types : black, gold, red)
+        mode : color of the hair (There are 4 types : black, gold, red, and custom)
     2. Run run.py
         python run.py
+
+        >> In the original HairColorChange program, there were only three colors: black, gold, and red. I updated the code to allow for custom colors as well.
 ## How to run this file?
     This code is used for facial image parsing, which involves dividing an input image into different regions based on the different features present in the image. 
     The code starts by importing necessary libraries including PyTorch, Numpy, PIL (Python Imaging Library), and OpenCV.
