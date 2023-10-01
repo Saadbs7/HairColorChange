@@ -119,6 +119,10 @@ def vis_parsing_maps(im, origin, parsing_anno, stride, save_im=False, save_path=
                     GB = 100
                     GG = 110
                     GR = 125
+                if mod=='custom':
+                    GR = input('Enter Red Value of the Custom RGB Colour: ')
+                    GG = input('Enter Green Value of the Custom RGB Colour: ')
+                    GB = input('Enter Blue sValue of the Custom RGB Colour: ')
                 
                 if brigh > 120 :
                     param = 20
@@ -165,4 +169,4 @@ def evaluate(cp='model/model.pth', input_path='4.jpg', output_path='output.jpg',
 
 
 if __name__ == "__main__":
-    evaluate(input_path='files/4.JPG', output_path='files/4_gold.jpg', mode='gold')
+    evaluate(input_path='files/4.JPG', output_path='files/4_gold.jpg', mode='custom')
